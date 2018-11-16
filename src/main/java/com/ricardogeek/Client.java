@@ -22,11 +22,11 @@ public class Client {
 
     public static void main(final String[] args) throws Exception {
         final Client client = new Client();
-        client.createProduct();
-        client.getAllProduct();
+        client.createLibro();
+        client.getAllLibros();
     }
 
-    private void createProduct() {
+    private void createLibro() {
         final URI uri = URI.create(String.format("http://%s:%d/libro/", HOST, PORT));
         final Book libro = new Book(319, "Learning RxJava", "Thomas Nield ", "03.jpg", new BigDecimal("35.95"));
         final ClientRequest request = ClientRequest.method(HttpMethod.POST, uri)
@@ -36,7 +36,7 @@ public class Client {
         System.out.println(response.block().statusCode());
     }
 
-    private void getAllProduct() {
+    private void getAllLibros() {
         final URI uri = URI.create(String.format("http://%s:%d/libro", HOST, PORT));
         final ClientRequest request = ClientRequest.method(HttpMethod.GET, uri).build();
         final Flux<Book> productList = exchange.exchange(request)

@@ -33,5 +33,12 @@ Defines an embedded tomcat that defines the app routes and consumes the handler 
  _Client_
  A small class that consumes the reactive endpoints of the library.
 
+# Resources
+
+This is a repository to complement the information in this post (in spanish): 
+
+[Programación Reactiva Con Spring 5]
 
 
+
+[Programación Reactiva Con Spring 5]: https://ricardogeek.com/programacion-reactiva-con-spring-5

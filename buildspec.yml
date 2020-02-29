@@ -13,7 +13,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t reactive-books:1.0.0-SNAPSHOT .
-      - docker tag reactive-books:1.0.0-SNAPSHOT 424614802894.dkr.ecr.us-east-1.amazonaws.com/reactive-books:1.0.0-SNAPSHOT
+      - docker tag reactive-books:1.0.0-SNAPSHOT reactive-books:1.0.0-SNAPSHOT
   post_build:
     commands:
       - echo Build completed on `date`

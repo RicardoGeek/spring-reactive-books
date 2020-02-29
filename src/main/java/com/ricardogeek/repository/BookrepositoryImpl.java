@@ -19,7 +19,7 @@ public class BookrepositoryImpl implements BookRepository {
                 "01.jpg",
                 new BigDecimal("22.39")));
 
-        catalogo.put(1, new Book(2,
+        catalogo.put(2, new Book(2,
                 "Reactive Programming with RxJava: Creating Asynchronous, Event-Based Applications",
                 "Tomasz Nurkiewicz &  Ben Christensen ",
                 "02.jpg",

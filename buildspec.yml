@@ -7,13 +7,13 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
+      - $(aws ecr get-login --no-include-email --region us-east-1)
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
-      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      - docker build -t reactive-books:1.0.0-SNAPSHOT .
+      - docker tag reactive-books:1.0.0-SNAPSHOT 424614802894.dkr.ecr.us-east-1.amazonaws.com/reactive-books:1.0.0-SNAPSHOT
   post_build:
     commands:
       - echo Build completed on `date`
